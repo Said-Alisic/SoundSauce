@@ -7,7 +7,7 @@ import {
 } from "native-base";
 
 // Color Switch Component
-export const DarkModeSwitch = () => {
+const DarkModeSwitch = (): React.JSX.Element => {
   const { colorMode, toggleColorMode } = useColorMode();
 	
   return (
@@ -24,3 +24,5 @@ export const DarkModeSwitch = () => {
     </HStack>
   );
 }
+
+export default DarkModeSwitch;

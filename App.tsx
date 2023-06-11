@@ -1,16 +1,14 @@
 import React from "react";
 import {
-  Text,
-  Link,
   HStack,
   Center,
   Heading,
   NativeBaseProvider,
   extendTheme,
   VStack,
-  Box,
 } from "native-base";
 import { DarkModeSwitch } from "./components";
+import { LoginScreen } from "./screens";
 
 // Define the config
 const config = {
@@ -24,7 +22,7 @@ type MyThemeType = typeof theme;
 declare module "native-base" {
   interface ICustomTheme extends MyThemeType {}
 }
-export default function App() {
+export default function App(): React.JSX.Element {
   return (
     <NativeBaseProvider>
       <Center
@@ -34,10 +32,9 @@ export default function App() {
         flex={1}
       >
         <VStack space={5} alignItems="center">
-
-          <Heading size="lg"> 안녕! 어서와.</Heading>
+          <Heading size="lg"> 사운드서스</Heading>
           <HStack space={2} alignItems="center">
-
+					  <LoginScreen/>
           </HStack>
           <DarkModeSwitch />
         </VStack>
