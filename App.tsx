@@ -7,7 +7,7 @@ import {
   extendTheme,
   VStack,
 } from "native-base";
-import { DarkModeSwitch } from "./components";
+import { DarkModeButton } from "./components";
 import { LoginScreen } from "./screens";
 
 // Define the config
@@ -32,12 +32,12 @@ export default function App(): React.JSX.Element {
         flex={1}
       >
         <VStack space={5} alignItems="center">
-          <Heading size="lg"> 사운드서스</Heading>
+          <Heading size="lg">사운드서스</Heading>
           <HStack space={2} alignItems="center">
 					  <LoginScreen/>
           </HStack>
-          <DarkModeSwitch />
         </VStack>
+				<DarkModeButton />
       </Center>
     </NativeBaseProvider>
   );
