@@ -1,11 +1,7 @@
 import React from "react";
 import {
-  HStack,
-  Center,
-  Heading,
   NativeBaseProvider,
   extendTheme,
-  VStack,
 } from "native-base";
 import { DarkModeButton } from "./components";
 import { LoginScreen } from "./screens";
@@ -25,20 +21,8 @@ declare module "native-base" {
 export default function App(): React.JSX.Element {
   return (
     <NativeBaseProvider>
-      <Center
-        _dark={{ bg: "blueGray.900" }}
-        _light={{ bg: "blueGray.50" }}
-        px={4}
-        flex={1}
-      >
-        <VStack space={5} alignItems="center">
-          <Heading size="lg">사운드서스</Heading>
-          <HStack space={2} alignItems="center">
-					  <LoginScreen/>
-          </HStack>
-        </VStack>
-				<DarkModeButton />
-      </Center>
+			<LoginScreen/>
+			<DarkModeButton />
     </NativeBaseProvider>
   );
 }
