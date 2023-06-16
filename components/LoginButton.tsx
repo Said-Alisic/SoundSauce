@@ -6,8 +6,8 @@ import { ILoginButtonProps } from '../libs/interfaces';
 
 const loginHandler = new LoginHandler();
 
-const LoginButton: React.FC<ILoginButtonProps>  = ({ email, password }): React.JSX.Element => {
-	const handleLogin = () => {
+const LoginButton: React.FC<ILoginButtonProps>  = ({ email, password }): JSX.Element => {
+	const handleLogin = (): void => {
     loginHandler.handleLogin(email, password);
   };
 

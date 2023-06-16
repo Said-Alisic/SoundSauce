@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Input } from 'native-base';
 import { ILoginInputProps } from '../libs/interfaces';
 
-
 const LoginInput: React.FC<ILoginInputProps> = (
 	{
 		onInputChange,
@@ -10,10 +9,10 @@ const LoginInput: React.FC<ILoginInputProps> = (
 		isSecureTextField = false,
 	}
 	  ): 
-		React.JSX.Element => {
+		JSX.Element => {
   const [input, setInput] = useState('');
 
-  const handleInputChange = (value: string) => {
+  const handleInputChange = (value: string): void => {
     setInput(value);
     onInputChange(value);
   };

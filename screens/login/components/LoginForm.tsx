@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { VStack, FormControl, Input } from 'native-base';
+import { VStack, FormControl } from 'native-base';
 import { LoginButton, LoginInput } from '../../../components';
 
-const LoginForm = (): React.JSX.Element => {
+const LoginForm = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 

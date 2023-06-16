@@ -6,7 +6,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 // Color Switch Component
-const DarkModeButton = (): React.JSX.Element => {
+const DarkModeButton = (): JSX.Element => {
   const { colorMode, toggleColorMode } = useColorMode();
 
 	const isDarkMode: boolean = colorMode === 'dark';
