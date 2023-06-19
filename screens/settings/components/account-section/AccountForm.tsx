@@ -9,37 +9,33 @@ const AccountForm = (): JSX.Element => {
   const [password, setPassword] = useState('BestPassword');
 
   return (
-		<VStack space={3} width="100%">
-			<FormControl>
-				<FormInput 
-					placeholder={"Name"}
-					value={name}
-					isSecureTextField={false}
-					onInputChange={setName} 
-				/>
-			</FormControl>
-			<FormControl>
-				<FormInput 
-					placeholder={"Email"}
-					value={email}
-					isSecureTextField={false}
-					onInputChange={setEmail} 
-				/>
-			</FormControl>
-			<FormControl>
-				<FormInput 
-					placeholder={ "Password"}
-					value={password}
-					isSecureTextField={true}
-					onInputChange={setPassword} 
-				/>
-			</FormControl>
-			<AccountFormSubmitButton
-				name={name}
-				email={email}
-				password={password}
-			/>
-	  </VStack>
+    <VStack space={3} width="100%">
+      <FormControl>
+        <FormInput
+          placeholder={'Name'}
+          value={name}
+          isSecureTextField={false}
+          onInputChange={setName}
+        />
+      </FormControl>
+      <FormControl>
+        <FormInput
+          placeholder={'Email'}
+          value={email}
+          isSecureTextField={false}
+          onInputChange={setEmail}
+        />
+      </FormControl>
+      <FormControl>
+        <FormInput
+          placeholder={'Password'}
+          value={password}
+          isSecureTextField={true}
+          onInputChange={setPassword}
+        />
+      </FormControl>
+      <AccountFormSubmitButton name={name} email={email} password={password} />
+    </VStack>
   );
 };
 

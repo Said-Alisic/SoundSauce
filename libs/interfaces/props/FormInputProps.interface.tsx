@@ -1,7 +1,7 @@
 interface IFormInputProps {
   onInputChange: (value: string) => void;
   placeholder: string;
-	value?: string;
+  value?: string;
   isSecureTextField?: boolean;
 }
 

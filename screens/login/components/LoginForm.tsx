@@ -8,26 +8,23 @@ const LoginForm = (): JSX.Element => {
   const [password, setPassword] = useState('');
 
   return (
-		<VStack space={2} width="60%">
-			<FormControl>
-				<FormInput 
-				  placeholder="Email"
-					isSecureTextField={false}
-				  onInputChange={setEmail} 
-				/>
-			</FormControl>
-			<FormControl>
-			<FormInput 
-				  placeholder="Password"
-					isSecureTextField={true}
-				  onInputChange={setPassword} 
-				/>
-			</FormControl>
-			<LoginButton
-			  email={email}
-				password={password}
-			/>
-		</VStack>
+    <VStack space={2} width="60%">
+      <FormControl>
+        <FormInput
+          placeholder="Email"
+          isSecureTextField={false}
+          onInputChange={setEmail}
+        />
+      </FormControl>
+      <FormControl>
+        <FormInput
+          placeholder="Password"
+          isSecureTextField={true}
+          onInputChange={setPassword}
+        />
+      </FormControl>
+      <LoginButton email={email} password={password} />
+    </VStack>
   );
 };
 
