@@ -1,5 +1,7 @@
-import DarkModeSwitch from './DarkModeSwitch';
-import LoginButton from './LoginButton';
-import LoginInput from './LoginInput';
+import DarkModeButton from './DarkModeButton';
+import FormInput from './FormInput';
 
-export { DarkModeSwitch, LoginButton, LoginInput };
+export { 
+	DarkModeButton,
+	FormInput,
+};

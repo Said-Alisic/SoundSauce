@@ -1,7 +1,8 @@
-interface ILoginInputProps {
+interface IFormInputProps {
   onInputChange: (value: string) => void;
   placeholder: string;
+	value?: string;
   isSecureTextField?: boolean;
 }
 
-export default ILoginInputProps;
+export default IFormInputProps;
