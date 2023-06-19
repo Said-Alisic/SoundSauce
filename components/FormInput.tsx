@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Input } from 'native-base';
-import { ILoginInputProps } from '../libs/interfaces';
+import { IFormInputProps } from '../libs/interfaces';
 
-const LoginInput: React.FC<ILoginInputProps> = (
+const FormInput: React.FC<IFormInputProps> = (
 	{
 		onInputChange,
+		value,
 		placeholder,
 		isSecureTextField = false,
 	}
 	  ): 
 		JSX.Element => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState(value ? value : '');
 
   const handleInputChange = (value: string): void => {
     setInput(value);
@@ -27,4 +28,4 @@ const LoginInput: React.FC<ILoginInputProps> = (
   );
 };
 
-export default LoginInput;
+export default FormInput;

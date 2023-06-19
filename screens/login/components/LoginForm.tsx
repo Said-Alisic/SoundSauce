@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { VStack, FormControl } from 'native-base';
-import { LoginButton, LoginInput } from '../../../components';
+import { FormInput } from '../../../components';
+import LoginButton from './LoginButton';
 
 const LoginForm = (): JSX.Element => {
   const [email, setEmail] = useState('');
@@ -9,14 +10,14 @@ const LoginForm = (): JSX.Element => {
   return (
 		<VStack space={2} width="60%">
 			<FormControl>
-				<LoginInput 
+				<FormInput 
 				  placeholder="Email"
 					isSecureTextField={false}
 				  onInputChange={setEmail} 
 				/>
 			</FormControl>
 			<FormControl>
-			<LoginInput 
+			<FormInput 
 				  placeholder="Password"
 					isSecureTextField={true}
 				  onInputChange={setPassword} 

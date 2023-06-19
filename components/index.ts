@@ -1,13 +1,7 @@
 import DarkModeButton from './DarkModeButton';
-import LoginButton from './LoginButton';
-import LoginInput from './LoginInput';
-import LanguageSelect from './LanguageSelect';
-import LanguageSelectItem from './LanguageSelectItem';
+import FormInput from './FormInput';
 
 export { 
 	DarkModeButton,
-	LoginButton,
-	LoginInput,
-	LanguageSelect,
-	LanguageSelectItem
+	FormInput,
 };

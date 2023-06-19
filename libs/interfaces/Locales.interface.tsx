@@ -1,6 +1,6 @@
 interface ILocales {
 	language: string;
-	locale: string;
+	localeCode: string;
 }
 
 export default ILocales;

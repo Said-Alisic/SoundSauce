@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Button } from 'native-base';
-import { LoginHandler } from '../handlers';
-import { ILoginButtonProps } from '../libs/interfaces';
+import { LoginHandler } from '../../../handlers';
+import { ILoginButtonProps } from '../../../libs/interfaces';
 
 const loginHandler = new LoginHandler();
 
