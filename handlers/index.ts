@@ -1,5 +1,5 @@
-import LoginHandler from "./LoginHandler";
-import AccountHandler from "./AccountHandler";
-import LanguageHandler from "./LanguageHandler";
+import LoginHandler from './LoginHandler';
+import AccountHandler from './AccountHandler';
+import LanguageHandler from './LanguageHandler';
 
-export { LoginHandler, AccountHandler, LanguageHandler }
+export { LoginHandler, AccountHandler, LanguageHandler };
