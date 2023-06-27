@@ -1,6 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
+	"author": "Said Alisic",
   "main": "node_modules/expo/AppEntry.js",
   "keywords": [
     "react",
@@ -32,13 +33,13 @@
     "@babel/core": "^7.12.9",
     "@types/react": "~18.0.27",
     "@types/react-native": "~0.64.12",
+    "git-cz": "^4.9.0",
     "prettier": "^2.8.8",
     "typescript": "^4.9.5"
   },
-  "bugs": {
-    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
-  },
-  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
-  "author": "Aditya Jamuar",
-  "private": true
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  }
 }
