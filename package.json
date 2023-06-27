@@ -1,6 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
+  "author": "Said Alisic",
   "main": "node_modules/expo/AppEntry.js",
   "keywords": [
     "react",
@@ -18,13 +19,16 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^48.0.0",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/native-stack": "^6.9.13",
+    "expo": "^48.0.6",
     "expo-status-bar": "~1.4.4",
     "native-base": "3.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "^0.71.8",
-    "react-native-safe-area-context": "^4.5.0",
+    "react-native-safe-area-context": "4.5.0",
+    "react-native-screens": "~3.20.0",
     "react-native-svg": "^13.4.0",
     "react-native-web": "^0.18.12"
   },
@@ -32,13 +36,13 @@
     "@babel/core": "^7.12.9",
     "@types/react": "~18.0.27",
     "@types/react-native": "~0.64.12",
+    "git-cz": "^4.9.0",
     "prettier": "^2.8.8",
     "typescript": "^4.9.5"
   },
-  "bugs": {
-    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
-  },
-  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
-  "author": "Aditya Jamuar",
-  "private": true
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  }
 }

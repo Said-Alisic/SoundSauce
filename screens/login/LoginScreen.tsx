@@ -5,7 +5,12 @@ import { Center } from 'native-base';
 
 const LoginScreen = (): JSX.Element => {
   return (
-    <Center px={4} flex={1}>
+    <Center
+      px={4}
+      _dark={{ bg: 'blueGray.900' }}
+      _light={{ bg: 'blueGray.50' }}
+      flex={1}
+    >
       <VStack space={5} alignItems="center">
         <Heading
           mb={4}
