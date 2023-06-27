@@ -2,6 +2,8 @@ import React from 'react';
 import { NativeBaseProvider, View, extendTheme } from 'native-base';
 import { DarkModeButton } from './components';
 import { LoginScreen, SettingsScreen } from './screens';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Define the config
 const config = {
@@ -15,19 +17,25 @@ type MyThemeType = typeof theme;
 declare module 'native-base' {
   interface ICustomTheme extends MyThemeType {}
 }
+
+const Stack = createNativeStackNavigator();
+
 export default function App(): JSX.Element {
   return (
     <NativeBaseProvider>
-      <View
-        _dark={{ bg: 'blueGray.900' }}
-        _light={{ bg: 'blueGray.50' }}
-        px={4}
-        flex={1}
-      >
-        {/* <LoginScreen/> */}
-        <SettingsScreen />
-        <DarkModeButton />
-      </View>
+      <NavigationContainer>
+        <View flex={1}>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+            }}
+          >
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Settings" component={SettingsScreen} />
+          </Stack.Navigator>
+          <DarkModeButton />
+        </View>
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 }

@@ -5,7 +5,12 @@ import LanguageSection from './components/language-section/LanguageSection';
 
 const SettingsScreen = (): JSX.Element => {
   return (
-    <ScrollView px={4} flex={1}>
+    <ScrollView
+      px={4}
+      flex={1}
+      _dark={{ bg: 'blueGray.900' }}
+      _light={{ bg: 'blueGray.50' }}
+    >
       <VStack space={5}>
         <View style={{ top: 80 }}>
           <Center>
