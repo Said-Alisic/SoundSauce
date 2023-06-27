@@ -4,6 +4,7 @@ import { DarkModeButton } from './components';
 import { LoginScreen, SettingsScreen } from './screens';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Navigation from './navigation/Navigation';
 
 // Define the config
 const config = {
@@ -23,19 +24,8 @@ const Stack = createNativeStackNavigator();
 export default function App(): JSX.Element {
   return (
     <NativeBaseProvider>
-      <NavigationContainer>
-        <View flex={1}>
-          <Stack.Navigator
-            screenOptions={{
-              headerShown: false,
-            }}
-          >
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Settings" component={SettingsScreen} />
-          </Stack.Navigator>
-          <DarkModeButton />
-        </View>
-      </NavigationContainer>
+      <Navigation />
+      <DarkModeButton />
     </NativeBaseProvider>
   );
 }
