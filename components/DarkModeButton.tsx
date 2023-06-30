@@ -10,7 +10,7 @@ const DarkModeButton = (): JSX.Element => {
 
   const iconName: string = isDarkMode ? 'moon-sharp' : 'ios-sunny-sharp';
   const iconBgColor: string = isDarkMode ? '#fde047' : '#1e3a8a';
-  const iconColor: string = isDarkMode ? '#1e3a8a' : '#fde047';
+  const iconColor: string = isDarkMode ? '#6366f1' : '#fde047';
 
   return (
     <IconButton
