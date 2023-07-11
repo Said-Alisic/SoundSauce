@@ -84,6 +84,13 @@ const MusicPlayerScreen = () => {
                 bg: 'transparent',
                 bgColor: 'transparent',
               }}
+              _pressed={{
+                bg: 'transparent',
+                bgColor: 'transparent',
+                _icon: {
+                  color: 'indigo.400',
+                },
+              }}
               onPress={() => console.log('hey 3')}
             />
             <IconButton
@@ -98,6 +105,13 @@ const MusicPlayerScreen = () => {
               _hover={{
                 bg: 'transparent',
                 bgColor: 'transparent',
+              }}
+              _pressed={{
+                bg: 'transparent',
+                bgColor: 'transparent',
+                _icon: {
+                  color: 'indigo.400',
+                },
               }}
               onPress={() => console.log('Previous Song')}
             />
@@ -131,6 +145,13 @@ const MusicPlayerScreen = () => {
                 bg: 'transparent',
                 bgColor: 'transparent',
               }}
+              _pressed={{
+                bg: 'transparent',
+                bgColor: 'transparent',
+                _icon: {
+                  color: 'indigo.400',
+                },
+              }}
               onPress={() => console.log('Next Song')}
             />
             <IconButton
@@ -145,6 +166,13 @@ const MusicPlayerScreen = () => {
               _hover={{
                 bg: 'transparent',
                 bgColor: 'transparent',
+              }}
+              _pressed={{
+                bg: 'transparent',
+                bgColor: 'transparent',
+                _icon: {
+                  color: 'indigo.400',
+                },
               }}
               onPress={() => console.log('Block Song')}
             />
