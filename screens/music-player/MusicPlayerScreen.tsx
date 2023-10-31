@@ -12,6 +12,7 @@ import {
 } from 'native-base';
 import { Entypo, Octicons, Ionicons } from '@expo/vector-icons';
 import { Text } from 'native-base';
+import MinimizePlayerButton from './components/MinimizePlayerButton';
 
 const MusicPlayerScreen = () => {
   return (
@@ -21,31 +22,11 @@ const MusicPlayerScreen = () => {
       _dark={{ bg: 'blueGray.900' }}
       _light={{ bg: 'blueGray.50' }}
     >
-      <VStack style={{ top: 50 }}>
-        <IconButton
-          colorScheme="indigo"
-          variant="ghost"
-          borderRadius="full"
-          style={{
-            top: 10,
-            left: 20,
-            width: '0%',
-          }}
-          _icon={{
-            as: Entypo,
-            size: 'md',
-            name: 'chevron-thin-down',
-          }}
-          _hover={{
-            bg: 'transparent',
-            bgColor: 'transparent',
-          }}
-          onPress={() => console.log('hey 2')}
-        />
-      </VStack>
+      <MinimizePlayerButton />
       <VStack style={{ top: 100, marginBottom: 30 }}>
         <Center style={{ backgroundColor: `transparent` }}>
           <Box style={{ width: 320, height: 320 }} shadow={5}>
+            {/* TODO: Set the 'uri' and 'alt' properties to response from API (!!! Requires finished backend API and DB !!!) */}
             <Image
               resizeMode="cover"
               source={{
@@ -63,6 +44,7 @@ const MusicPlayerScreen = () => {
         <Heading mb={1.5} size={'lg'}>
           [Song Title]
         </Heading>
+        {/* TODO: Display artist names as an array of strings */}
         <Text size={'md'}>[Artist name(s)]</Text>
       </VStack>
       <VStack style={{ bottom: 240 }}>
@@ -91,7 +73,8 @@ const MusicPlayerScreen = () => {
                   color: 'indigo.400',
                 },
               }}
-              onPress={() => console.log('hey 3')}
+              // TODO: Add technical logic later
+              onPress={() => console.log('Save Song')}
             />
             <IconButton
               colorScheme="indigo"
@@ -113,6 +96,7 @@ const MusicPlayerScreen = () => {
                   color: 'indigo.400',
                 },
               }}
+              // TODO: Add technical logic later
               onPress={() => console.log('Previous Song')}
             />
             <IconButton
@@ -130,6 +114,7 @@ const MusicPlayerScreen = () => {
                 bg: 'transparent',
                 bgColor: 'transparent',
               }}
+              // TODO: Add technical logic later
               onPress={() => console.log('Play Song')}
             />
             <IconButton
@@ -152,6 +137,7 @@ const MusicPlayerScreen = () => {
                   color: 'indigo.400',
                 },
               }}
+              // TODO: Add technical logic later
               onPress={() => console.log('Next Song')}
             />
             <IconButton
@@ -174,15 +160,16 @@ const MusicPlayerScreen = () => {
                   color: 'indigo.400',
                 },
               }}
+              // TODO: Add technical logic later
               onPress={() => console.log('Block Song')}
             />
           </HStack>
         </Center>
       </VStack>
 
-      {/* TODO: #4 -> Add play button */}
-      {/* TODO: #4 -> Add controller previous song button */}
-      {/* TODO: #4 -> Add controller next song button */}
+      {/* TODO: #4 -> Add separate component for play button */}
+      {/* TODO: #4 -> Add separate component for controller previous song button */}
+      {/* TODO: #4 -> Add separate component for controller next song button */}
     </View>
   );
 };
