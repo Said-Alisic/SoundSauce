@@ -17,6 +17,8 @@ export default function Navigation(): JSX.Element {
         >
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Settings" component={SettingsScreen} />
+          {/* TODO: Remove MusicPlayer from navigation later and use as an overlay component when technical logic is in place ✨ */}
+          <Stack.Screen name="MusicPlayer" component={SettingsScreen} />
         </Stack.Navigator>
       </View>
     </NavigationContainer>
